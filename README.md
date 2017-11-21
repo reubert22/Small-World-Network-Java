@@ -1,2 +1,24 @@
-# Small-World-Network-Java
-Practical work did on Java language
+#Teoria dos Grafos – Trabalho Prático
+ 
+##Redes Small World – Teoria dos seis graus de separação 
+ 
+Fonte: <http://www.bayerjovens.com.br/pt/colunas/coluna/?materia=seis-graus-de-separacao>
+A ideia de que você está a seis apertos de mão ou menos do presidente dos Estados Unidos, Barack Obama, ou de qualquer outra pessoa, ficou famosa na década de 1990 quando o dramaturgo americano John Guare escreveu a peça “Seis Graus de Separação”, que três anos depois se tornaria o filme de mesmo nome com Will Smith e Donald Sutherland. O conceito, no entanto, é bem anterior à década de 1990. Tem quase meio século. Foi desenvolvido pelo psicólogo social americano Stanley Milgram que publicou em 1967 um artigo no qual afirmava que estamos todos a seis ou menos graus de separação de qualquer pessoa do planeta. Nele, Milgram descrevia um experimento feito por ele mesmo na década de 1960 no qual pediu a voluntários das cidades de Omaha (Nebraska) e Wichita (Kansas) que enviassem uma correspondência para um morador específico de Boston (Massachusetts) – todas cidades nos Estados Unidos. O detalhe é que os voluntários não poderiam enviar diretamente a carta, mas por meio de amigos e contatos que pudessem ajudar na entrega da carta ao destinatário final em Boston. Ao final do experimento, Milgram fez o cálculo de quantos intermediários foram necessários em média para que a carta chegasse ao seu destino. A conclusão foi seis. 
+ 
+Apesar de todo o frisson em torno da ideia após o filme, pouca pesquisa foi feita na área até o final da década de 1990 quando Duncan Watts, então na Universidade de Columbia, e Steven Strogatz, da Universidade de Cornell, ambas nos Estados Unidos, mostraram que o fenômeno dos graus de separação, conhecido entre os cientistas como “fenômeno do mundo pequeno”, está presente não apenas na rede de relações humanas analisada por Milgram, mas também em outras redes criadas por humanos (exemplo: rede elétrica) e em redes naturais (a rede de neurônios do C. elegans, um verme muito usado em pesquisa científica). Nos dois casos (rede elétrica e de neurônios do C. elegans), os valores encontrados por Watts e Strogatz são inclusive menores do que seis. E não são apenas elas. O mesmo fenômeno vale para a rede de atores de Hollywood como mostra o site Oracle of Bacon que acha a relação entre dois atores ou o MathSciNet , entre dois matemáticos. 
+ 
+Mais recentemente pesquisadores mostraram que o Facebook e o Twitter não ficam de fora dessa história. No primeiro, as pessoas estão em média a seis graus uma da outra e no segundo a quatro. O fato é: não importa se são três, quatro, cinco ou seis. O mundo é pequeno, muito pequeno. 
+ 
+Descrição do trabalho 
+ 
+1. Small world 
+ 
+Para obter a distância média de uma rede, deve-se calcular a distância média entre todos os pares de vértices do grafo. A definição da distância média entre todos os pares de vértices de um grafo é definida pela fórmula abaixo: 
+ 
+onde dij é a distância do vértice i ao vértice j,           n é o número de vértices do grafo. 
+ 
+O caminho mínimo, também chamado de caminho geodésico ou distância, é aquele formado pelo menor número de arestas que conectam um vértice origem e um vértice destino.  Para evitar problemas no cálculo da distância média, são considerados apenas os pares de nós em que há um caminho entre eles. 
+
+ Instruções: 
+ 
+• Utilize os arquivos “VerticesFacebook.txt” e “ArestasFacebook.txt” que contém respectivamente os vértices e as arestas de uma base da rede social Facebook. o Base coletada e disponibilizada pela Stanford University. Disponível em http://snap.stanford.edu/data/ o A base foi adaptada para atender às necessidades desse trabalho. o A rede do Facebook contida no arquivo forma um grafo com 1919 vértices e 40000 arestas. O grafo é não orientado, os vértices representam pessoas e arestas as amizades entre essas pessoas. o O arquivo “VerticesFacebook.txt” contém em cada linha o número do vértice. o O arquivo “ArestasFacebook.txt” tem em cada linha a informação de uma aresta, no seguinte formato: origem-destino, onde o vértice de origem aparecerá antes do “-“ (hífen) e o destino após o “-“ (hífen).  o Os dados devem ser lidos do arquivo e deve ser gerado o grafo utilizando a biblioteca GraphStream. • Encontre o maior componente conexo do grafo (Um componente conexo de um grafo é formado por um conjunto de vértices conexos).  o Escreva o tamanho do componente: Número de vértices e número de arestas. o Calcule a distância média, conforme descrito no item 1 desse trabalho. o Dica: a busca em profundidade pode ser utilizada para detectar componentes conexos. 
